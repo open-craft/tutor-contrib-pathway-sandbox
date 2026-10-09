@@ -45,33 +45,6 @@ repointing a legacy MFE, changes the image build -- unlike toggling an app on
 or off.
 
 
-Why a plugin
-------------
-
-Grove PR sandboxes let the PR author set Tutor *config values* from the PR
-body. Since Palm, tutor-mfe has no per-app config keys: the
-``MFE_APP_*_REPOSITORY`` / ``_VERSION`` settings are gone, and per-app sources
-are reachable only from a plugin, through the ``tutormfe.hooks.MFE_APPS`` and
-``FRONTEND_APPS`` filters.
-
-So the PR body only has to name this repository, under its
-``**Tutor requirements**`` heading::
-
-    git+https://github.com/open-craft/tutor-contrib-pathway-sandbox.git@main
-
-
-Changing a fork
----------------
-
-The refs are the constants at the top of ``tutorpathwaysandbox/plugin.py``. To
-move one, edit it and push -- a change to this repository's requirements is
-what triggers the sandbox redeploy. Every ref must be pushed and public before
-use: the image build clones it over plain HTTPS.
-
-If tutor-mfe stops registering one of these apps, the plugin skips it instead
-of failing ``tutor config save``.
-
-
 License
 -------
 

@@ -1,10 +1,5 @@
 """Build the pathway MFEs from the OpenCraft forks, and turn on the flag.
 
-Tutor has no per-app MFE configuration: since Palm, tutor-mfe dropped the
-``MFE_APP_*`` settings, and per-app sources are reachable only from a plugin,
-through these two filters. That is also why this is a plugin and not a Grove PR
-sandbox ``**Settings**`` block, which can only set config values.
-
 Which of the two shapes an app uses decides the hook:
 
 - ``FRONTEND_APPS`` -- frontend-base apps, bundled into the single site as npm
