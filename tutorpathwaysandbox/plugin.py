@@ -25,7 +25,7 @@ from tutormfe.hooks import FRONTEND_APPS, MFE_APPS
 FRONTEND_APP_SOURCES = {
     "catalog": (
         "https://github.com/open-craft/frontend-app-catalog.git"
-        "#rpenido/navin/fal-4380/pathway-detail-page"
+        "#rpenido/navin/fal-4374/public-explore-update"
     ),
     "learner-dashboard": (
         "https://github.com/open-craft/frontend-app-learner-dashboard.git"
