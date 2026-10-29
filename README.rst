@@ -18,9 +18,9 @@ App                       Built by tutor-mfe as       Overridden to
 
 Refs in use:
 
-- ``open-craft/frontend-app-catalog`` ``rpenido/navin/fal-4380/pathway-detail-page``
-- ``open-craft/frontend-app-learner-dashboard`` ``chris/pathway-updates``
-- ``open-craft/frontend-app-learning`` ``chris/fal-4397-course-pathway-strip``
+- ``open-craft/frontend-app-catalog`` ``rpenido/fal-4374/slot-docs`` (tip of the #174 to #178 stack)
+- ``open-craft/frontend-app-learner-dashboard`` ``chris/unenroll-pathways-warning`` (tip of the #879 to #881 stack)
+- ``open-craft/frontend-app-learning`` ``chris/fal-4398-pathway-progress-page`` (tip of the #2159, #2231 to #2233 stack)
 
 It also adds to ``mfe-lms-common-settings``::
 
