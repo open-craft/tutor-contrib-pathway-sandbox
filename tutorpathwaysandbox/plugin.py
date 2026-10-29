@@ -25,18 +25,18 @@ from tutormfe.hooks import FRONTEND_APPS, MFE_APPS
 FRONTEND_APP_SOURCES = {
     "catalog": (
         "https://github.com/open-craft/frontend-app-catalog.git"
-        "#rpenido/navin/fal-4380/pathway-detail-page"
+        "#rpenido/fal-4374/slot-docs"
     ),
     "learner-dashboard": (
         "https://github.com/open-craft/frontend-app-learner-dashboard.git"
-        "#chris/pathway-updates"
+        "#chris/unenroll-pathways-warning"
     ),
 }
 
 LEGACY_MFE_SOURCES = {
     "learning": {
         "repository": "https://github.com/open-craft/frontend-app-learning.git",
-        "version": "chris/fal-4397-course-pathway-strip",
+        "version": "chris/fal-4398-pathway-progress-page",
     },
 }
 
