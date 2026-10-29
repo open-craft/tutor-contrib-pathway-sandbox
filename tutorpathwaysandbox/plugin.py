@@ -1,4 +1,4 @@
-"""Build the pathway MFEs from the OpenCraft forks, and turn on the flag.
+"""Build the pathway MFEs from the OpenCraft forks.
 
 Which of the two shapes an app uses decides the hook:
 
@@ -19,7 +19,6 @@ tutor-mfe's site package.json -- so the workspace links and tutor-mfe's
 package-lock.json stay valid.
 """
 
-from tutor import hooks
 from tutormfe.hooks import FRONTEND_APPS, MFE_APPS
 
 FRONTEND_APP_SOURCES = {
@@ -59,17 +58,3 @@ def _use_pathway_legacy_mfe_forks(mfes: dict) -> dict:
         if app_name in mfes:
             mfes[app_name].update(source)
     return mfes
-
-
-# Both pipelines: `learning` reads MFE_CONFIG, while the two frontend-base apps
-# read the site config served from /api/frontend_site_config/v1/. This patch is
-# rendered after both dicts exist, in the development and production settings
-# templates alike. The apps compare the value strictly (`=== true`), so it has
-# to survive as a JSON boolean.
-hooks.Filters.ENV_PATCHES.add_item(
-    (
-        "mfe-lms-common-settings",
-        'MFE_CONFIG["ENABLE_PATHWAY_PILOT_UI"] = True\n'
-        'FRONTEND_SITE_CONFIG["commonAppConfig"]["ENABLE_PATHWAY_PILOT_UI"] = True',
-    )
-)
